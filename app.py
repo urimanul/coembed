@@ -32,7 +32,7 @@ st.write(co_summarize)
 cochat = cohere.ClientV2(api_key)
 response = cochat.chat(
     model="command-r-plus-08-2024",
-    messages=[{"role": "user", "content": "hello world!"}],
+    messages=[{"role": "user", "content": "日本の総理大臣について教えて下さい"}],
 )
 
 st.write(response)
