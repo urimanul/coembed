@@ -16,7 +16,7 @@ res_embed = co.embed(
 st.write(res_embed)
 
 co_summarize = co.summarize(
-    text=texts
+    text=texts[0]
 )
 
 st.write(co_summarize)
