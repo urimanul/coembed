@@ -6,7 +6,7 @@ api_key = 'GqsxZlKmcBzSultkVOfKPf7kVhYkporXvivq9KHg'
 st.set_page_config(page_title="cohere embedding", layout="centered")
 
 co = cohere.Client(api_key)
-co.check_api_key()
+#co.check_api_key()
 
 res_embed = co.embed(
     texts=['こんにちは', '世界'],
