@@ -28,3 +28,10 @@ co_summarize = co.summarize(
 )
 
 st.write(co_summarize)
+
+response = co.chat(
+    model="command-r-plus-08-2024",
+    messages=[{"role": "user", "content": "hello world!"}],
+)
+
+st.write(response)
