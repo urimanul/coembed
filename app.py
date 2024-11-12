@@ -16,26 +16,7 @@ res_embed = co.embed(
 st.write(res_embed)
 
 text = (
-  "Ice cream is a sweetened frozen food typically eaten as a snack or dessert. "
-  "It may be made from milk or cream and is flavoured with a sweetener, "
-  "either sugar or an alternative, and a spice, such as cocoa or vanilla, "
-  "or with fruit such as strawberries or peaches. "
-  "It can also be made by whisking a flavored cream base and liquid nitrogen together. "
-  "Food coloring is sometimes added, in addition to stabilizers. "
-  "The mixture is cooled below the freezing point of water and stirred to incorporate air spaces "
-  "and to prevent detectable ice crystals from forming. The result is a smooth, "
-  "semi-solid foam that is solid at very low temperatures (below 2 °C or 35 °F). "
-  "It becomes more malleable as its temperature increases.\n\n"
-  "The meaning of the name \"ice cream\" varies from one country to another. "
-  "In some countries, such as the United States, \"ice cream\" applies only to a specific variety, "
-  "and most governments regulate the commercial use of the various terms according to the "
-  "relative quantities of the main ingredients, notably the amount of cream. "
-  "Products that do not meet the criteria to be called ice cream are sometimes labelled "
-  "\"frozen dairy dessert\" instead. In other countries, such as Italy and Argentina, "
-  "one word is used fo\r all variants. Analogues made from dairy alternatives, "
-  "such as goat's or sheep's milk, or milk substitutes "
-  "(e.g., soy, cashew, coconut, almond milk or tofu), are available for those who are "
-  "lactose intolerant, allergic to dairy protein or vegan."
+  "経済産業省は、ヘルスケア産業政策を通じて、超高齢社会における様々な課題に取り組んでいます。まず、急速な高齢化が進む中、社会保障費が増加し、これが財政に圧力をかけ、労働力の減少が経済活動を停滞させる懸念があることが指摘されています。特に、65歳以上の高齢者人口が横ばいである一方、若年層の減少が進んでいることが問題視されています。現在、社会保障給付費は年々増加しており、医療給付費と介護給付費の両方が2025年度に大幅に増加する見込みです。 次に、経済産業省は健康経営や健康投資を推進し、企業が従業員の健康を重視することで生産性の向上を目指しています。また、地域においては、ヘルスケア産業の創出を促進し、地域経済の活性化を図る施策が進められています。健康・医療情報の活用も重要なテーマであり、データの収集と分析を通じて、より良い医療サービスの提供を目指しています。 医療の国際展開に関しては、日本の医療技術や製品を海外市場に展開する取り組みが進んでいます。これにより、日本の医療機器産業の競争力を高めることが期待されています。認知症や介護予防に関しても、国民の健康寿命を延ばすための施策が必要とされています。さらに、ビジネスコンテストなどを通じて新たなアイデアや技術の開発が奨励されています。 医療機器産業の重点分野としては、手術支援、人工組織・臓器、低侵襲治療、イメージング、在宅医療機器が挙げられます。これらの分野では、国内企業の技術力を活用しながら、世界水準の医療機器の開発が進められています。特に、ロボット技術や3Dプリンティングなどの先端技術の応用が期待されています。 最後に、経済産業省は医療機器産業の全体像を描き、市場開拓や開発・治験、販売プロセスを通じて、海外市場の獲得を目指しています。産学官の連携を強化し、臨床ニーズに基づいた医療機器の開発を進めることで、実用化を図っています。また、海外展開に向けた国際標準化の加速も重要な施策として位置付けられています。"
 )
 
 co_summarize = co.summarize(
