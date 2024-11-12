@@ -35,4 +35,4 @@ response = cochat.chat(
     messages=[{"role": "user", "content": "日本の総理大臣について教えて下さい"}],
 )
 
-st.write(response.message.content[0])
+st.write(response.message.content[0].text)
