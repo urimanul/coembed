@@ -30,16 +30,15 @@ co_summarize = co.summarize(
 st.write(co_summarize)
 
 cochat = cohere.ClientV2(api_key)
-#cochat = cohere.Client(api_key)
 
 # ユーザーからの入力を受け取る
 user_input = st.text_input("プロンプトを入力して下さい:")
 
 # 入力がある場合にCohereのAPIを呼び出してレスポンスを表示
 if user_input:
-    response = co.chat(
+    response = cochat.chat(
         model="command-r-plus-08-2024",
         messages=[{"role": "user", "content": user_input}],
-        connectors=[{"id": "authryh-wfc54k"},{"id": "web-search"}],
+        #connectors=[{"id": "authryh-wfc54k"},{"id": "web-search"}],
     )
     st.write(response.message.content[0].text)
