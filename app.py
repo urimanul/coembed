@@ -39,6 +39,8 @@ if user_input:
     response = cochat.chat(
         model="command-r-plus-08-2024",
         messages=[{"role": "user", "content": user_input}],
-        #connectors=[{"id": "authryh-wfc54k"},{"id": "web-search"}],
+        documents=[
+        {"id": "1", "data": {"text": "Cohere is the best!", "title": "The best"}}
+        ],
     )
     st.write(response.message.content[0].text)
