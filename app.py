@@ -24,7 +24,8 @@ co_summarize = co.summarize(
     model='command-light',
     length='short',
     format='bullets',
-    extractiveness='high'
+    extractiveness='high',
+    language='ja'
 )
 
 st.write(co_summarize)
