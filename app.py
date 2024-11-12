@@ -37,7 +37,7 @@ user_input = st.text_input("プロンプトを入力して下さい:")
 
 # 入力がある場合にCohereのAPIを呼び出してレスポンスを表示
 if user_input:
-    response = cochat.chat(
+    response = co.chat(
         model="command-r-plus-08-2024",
         messages=[{"role": "user", "content": user_input}],
         #connectors=[{"id": "authryh-wfc54k"},{"id": "o365schedule-e4baaa"},{"id": "web-search"}],
