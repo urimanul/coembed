@@ -30,9 +30,14 @@ co_summarize = co.summarize(
 st.write(co_summarize)
 
 cochat = cohere.ClientV2(api_key)
-response = cochat.chat(
-    model="command-r-plus-08-2024",
-    messages=[{"role": "user", "content": "日本の総理大臣は誰ですか？"}],
-)
 
-st.write(response.message.content[0].text)
+# ユーザーからの入力を受け取る
+user_input = st.text_input("プロンプトを入力して下さい:")
+
+# 入力がある場合にCohereのAPIを呼び出してレスポンスを表示
+if user_input:
+    response = cochat.chat(
+        model="command-r-plus-08-2024",
+        messages=[{"role": "user", "content": user_input}],
+    )
+    st.write(response.message.content[0].text)
