@@ -39,5 +39,6 @@ if user_input:
     response = cochat.chat(
         model="command-r-plus-08-2024",
         messages=[{"role": "user", "content": user_input}],
+        connectors=[{"id": "authryh-wfc54k"},{"id": "o365schedule-e4baaa"},{"id": "web-search"}],
     )
     st.write(response.message.content[0].text)
