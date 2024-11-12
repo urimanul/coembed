@@ -20,7 +20,7 @@ text = (
 )
 
 co_summarize = co.summarize(
-    text=text
+    text=text,
     model='command-light',
     length='short',
     format='bullets',
