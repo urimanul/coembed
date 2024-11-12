@@ -29,7 +29,8 @@ co_summarize = co.summarize(
 
 st.write(co_summarize)
 
-response = co.chat(
+cochat = cohere.ClientV2()
+response = cochat.chat(
     model="command-r-plus-08-2024",
     messages=[{"role": "user", "content": "hello world!"}],
 )
