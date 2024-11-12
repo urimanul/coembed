@@ -21,6 +21,10 @@ text = (
 
 co_summarize = co.summarize(
     text=text
+    model='command-light',
+    length='short',
+    format='bullets',
+    extractiveness='high'
 )
 
 st.write(co_summarize)
