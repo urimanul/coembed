@@ -2,6 +2,9 @@ import streamlit as st
 import cohere
 api_key = 'GqsxZlKmcBzSultkVOfKPf7kVhYkporXvivq9KHg'
 
+# 初期設定
+st.set_page_config(page_title="cohere embedding", layout="centered")
+
 # カスタムCSSを追加
 st.markdown(
     """
@@ -15,9 +18,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# 初期設定
-st.set_page_config(page_title="cohere embedding", layout="centered")
 
 cochat = cohere.ClientV2(api_key)
 
