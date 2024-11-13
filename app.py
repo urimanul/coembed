@@ -150,7 +150,7 @@ with col2:
         st.session_state['show_process'] = False  # ボタンが押されたらshow_processをFalseに設定
 
 # 結果表示用のTextArea
-st.text_area("結果", value=st.session_state.get('groq_response', ''), key="readonly_textarea",　height=150)
+st.text_area("結果", value=st.session_state.get('groq_response', ''), height=150)
 st.markdown(f'<textarea class="readonly-textarea">{text}</textarea>', unsafe_allow_html=True)
 
 # 注意ラベル
