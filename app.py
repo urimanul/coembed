@@ -2,6 +2,20 @@ import streamlit as st
 import cohere
 api_key = 'GqsxZlKmcBzSultkVOfKPf7kVhYkporXvivq9KHg'
 
+# カスタムCSSを追加
+st.markdown(
+    """
+    <style>
+    .stTextArea textarea {
+        height: auto;
+        min-height: 50px;
+        max-height: 500px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # 初期設定
 st.set_page_config(page_title="cohere embedding", layout="centered")
 
