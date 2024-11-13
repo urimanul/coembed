@@ -108,7 +108,7 @@ groq_selected_value = st.selectbox(
 )
 
 # プロンプト入力用のTextArea（valueを直接指定しない）
-groq_chain = st.text_area("プロンプトを入力して下さい", height=150, key="groq_chain", key="readonly_textarea",)
+groq_chain = st.text_area("プロンプトを入力して下さい", height=150, key="groq_chain", key="readonly_textarea")
 
 
 
