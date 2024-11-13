@@ -87,14 +87,14 @@ my_data_source = [
 
 # コールバック関数の定義
 def update_groq_chain():
-    groq_selected_item = next(item for item in my_data_source if item["Name"] == st.session_state.selected_value)
+    groq_selected_item = next(item for item in my_data_source if item["Name"] == st.session_state.groq_selected_value)
     st.session_state.groq_chain = groq_selected_item["Value"]
 
 # セッションステートの初期化
 if 'groq_chain' not in st.session_state:
     st.session_state.groq_chain = ""
 if 'selected_value' not in st.session_state:
-    st.session_state.selected_value = my_data_source[0]["Name"]
+    st.session_state.groq_selected_value = my_data_source[0]["Name"]
 
 # SelectBoxの作成
 groq_selected_value = st.selectbox(
