@@ -1,5 +1,7 @@
 import streamlit as st
 import cohere
+import requests
+
 api_key = 'GqsxZlKmcBzSultkVOfKPf7kVhYkporXvivq9KHg'
 
 # 初期設定
@@ -22,6 +24,7 @@ st.markdown(
 cochat = cohere.ClientV2(api_key)
 
 # ユーザーからの入力を受け取る
+st.write("RAG")
 user_input = st.text_input("プロンプトを入力して下さい:")
 
 # 入力がある場合にCohereのAPIを呼び出してレスポンスを表示
@@ -45,6 +48,7 @@ if user_input:
 
 #st.write(res_embed)
 
+st.write("LLM")
 # SelectBox
 my_data_source = [
     {"Name": "-- プロンプトを選択して下さい --", "Value": ""},
