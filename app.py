@@ -25,7 +25,37 @@ cochat = cohere.ClientV2(api_key)
 
 # ユーザーからの入力を受け取る
 st.write("RAG")
-user_input = st.text_input("プロンプトを入力して下さい:")
+# データソースの定義
+cohere_data_source = [
+    {"Name": "-- プロンプトを選択して下さい --", "Value": ""},
+    {"Name": "韓国の首都は", "Value": "韓国の首都は"},
+    {"Name": "日本の首都は", "Value": "日本の首都は"},
+    {"Name": "米国の首都は", "Value": "米国の首都は"},
+]
+
+# コールバック関数の定義
+def update_cohere_chain():
+    selected_item = next(item for item in cohere_data_source if item["Name"] == st.session_state.selected_value)
+    st.session_state.cohere_chain = selected_item["Value"]
+
+# セッションステートの初期化
+if 'cohere_chain' not in st.session_state:
+    st.session_state.cohere_chain = ""
+if 'selected_value' not in st.session_state:
+    st.session_state.selected_value = cohere_data_source[0]["Name"]
+
+# SelectBoxの作成
+cohere_selected_value = st.selectbox(
+    label="選択",
+    options=[item["Name"] for item in cohere_data_source],
+    index=0,
+    key='selected_value',
+    on_change=update_cohere_chain
+)
+
+# プロンプト入力用のTextArea（valueを直接指定しない）
+user_input = st.text_area("プロンプトを入力して下さい", height=150, key="cohere_chain")
+#user_input = st.text_input("プロンプトを入力して下さい:")
 
 # 入力がある場合にCohereのAPIを呼び出してレスポンスを表示
 if user_input:
