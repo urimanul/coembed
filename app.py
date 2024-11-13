@@ -40,6 +40,7 @@ cohere_data_source = [
 def update_cohere_chain():
     selected_item = next(item for item in cohere_data_source if item["Name"] == st.session_state.selected_value)
     st.session_state.cohere_chain = selected_item["Value"]
+    st.session_state.groq_chain = ""
 
 # セッションステートの初期化
 if 'cohere_chain' not in st.session_state:
@@ -90,6 +91,7 @@ my_data_source = [
 def update_groq_chain():
     groq_selected_item = next(item for item in my_data_source if item["Name"] == st.session_state.groq_selected_value)
     st.session_state.groq_chain = groq_selected_item["Value"]
+    st.session_state.cohere_chain = ""
 
 # セッションステートの初期化
 if 'groq_chain' not in st.session_state:
