@@ -7,6 +7,8 @@ api_key = 'GqsxZlKmcBzSultkVOfKPf7kVhYkporXvivq9KHg'
 # 初期設定
 st.set_page_config(page_title="cohere embedding", layout="centered")
 
+st.title("COHERE RAG")
+
 # カスタムCSSを追加
 st.markdown(
     """
