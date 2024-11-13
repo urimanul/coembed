@@ -16,6 +16,7 @@ st.markdown(
         min-height: 50px;
         max-height: 500px;
     }
+    .readonly-textarea { pointer-events: none; background-color: #f0f0f0; color: #333; }
     </style>
     """,
     unsafe_allow_html=True
