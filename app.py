@@ -70,7 +70,6 @@ if user_input:
         ]    
     )
     st.text_area("結果",response.message.content[0].text)
-    st.markdown(f'<textarea class="readonly-textarea">{text}</textarea>', unsafe_allow_html=True)
 
 # 注意ラベル
 st.markdown("<p style='text-align:center; font-size:9px; color:darkslategray;'>回答は必ずしも正しいとは限りません。重要な情報は確認するようにしてください。</p>", unsafe_allow_html=True)
@@ -151,7 +150,6 @@ with col2:
 
 # 結果表示用のTextArea
 st.text_area("結果", value=st.session_state.get('groq_response', ''), height=150)
-st.markdown(f'<textarea class="readonly-textarea">{text}</textarea>', unsafe_allow_html=True)
 
 # 注意ラベル
 st.markdown("<p style='text-align:center; font-size:9px; color:darkslategray;'>回答は必ずしも正しいとは限りません。重要な情報は確認するようにしてください。</p>", unsafe_allow_html=True)
