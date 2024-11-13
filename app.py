@@ -148,7 +148,7 @@ with col2:
         st.session_state['show_process'] = False  # ボタンが押されたらshow_processをFalseに設定
 
 # 結果表示用のTextArea
-st.text_area("結果", value=st.session_state.get('groq_response', ''), height=150, disabled=True)
+st.text_area("結果", value=st.session_state.get('groq_response', ''), height=150, disabled=False)
 
 # 注意ラベル
 st.markdown("<p style='text-align:center; font-size:9px; color:darkslategray;'>回答は必ずしも正しいとは限りません。重要な情報は確認するようにしてください。</p>", unsafe_allow_html=True)
